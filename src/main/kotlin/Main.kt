@@ -1,9 +1,19 @@
 fun main() {
-    val listOfFruits = listOf("Apple", "Orange", "Banana")
-    for (fruit in listOfFruits) println("Fruit is $fruit")
-    listOfFruits.forEach { fruit -> println("Fruit is $fruit") }
-    val charactersOfFruit = listOfFruits.map { fruit -> fruit.length }
-    println("Characters of fruit -> $charactersOfFruit")
-    val charactersFilteredOfNumbers = charactersOfFruit.filter { fruitLength -> fruitLength > 5 }
-    println("Characters filtered -> $charactersFilteredOfNumbers")
+    var name: String? = null
+    try {
+        throw NullPointerException("Error was happened FZ")
+    } catch (exception: NullPointerException) {
+        println("Error - $exception")
+    } finally {
+        println("finish")
+    }
+
+    val firstNumber = 10
+    val secondNumber = 0
+    val result: Int = try {
+        firstNumber / secondNumber
+    } catch (exception: Exception) {
+        0
+    }
+    println("Result is $result")
 }
