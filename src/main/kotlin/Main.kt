@@ -1,13 +1,9 @@
 fun main() {
-    var count = 10
-    while (count > 0) {
-        println("Count value is $count")
-        count--
-    }
-
-    do {
-        println("Generating random number")
-        val randomNumber = (0..100).random()
-        println("Random number is $randomNumber")
-    } while (randomNumber > 50)
+    val listOfFruits = listOf("Apple", "Orange", "Banana")
+    for (fruit in listOfFruits) println("Fruit is $fruit")
+    listOfFruits.forEach { fruit -> println("Fruit is $fruit") }
+    val charactersOfFruit = listOfFruits.map { fruit -> fruit.length }
+    println("Characters of fruit -> $charactersOfFruit")
+    val charactersFilteredOfNumbers = charactersOfFruit.filter { fruitLength -> fruitLength > 5 }
+    println("Characters filtered -> $charactersFilteredOfNumbers")
 }
