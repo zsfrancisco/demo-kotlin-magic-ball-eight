@@ -1,20 +1,16 @@
 fun main() {
-    val ageOfSuperHeroes = mapOf(
-        "Ironman" to 35,
-        "Superman" to 40,
-        "Spiderman" to 23,
-        "American Captain" to 99
-    )
-    println("super heroes age are $ageOfSuperHeroes")
-    println("Spiderman age is ${ageOfSuperHeroes["Spiderman"]}")
+    val vocalsRepeated = setOf("a", "e", "i", "o", "u", "a", "e")
+    println("vocals repeated are $vocalsRepeated")
 
-    val ageOfSoccerPlayers = mutableMapOf(
-        "Cristiano" to 36,
-        "Kaká" to 40
-    )
-    ageOfSoccerPlayers["Messi"] = 33
-    ageOfSoccerPlayers.remove("Kaká")
-    println("Soccer players age is $ageOfSoccerPlayers")
+    val ageRepeated = mutableSetOf(10, 11, 44, 5, 5, 10, 15, 20)
+    ageRepeated.add(45)
+    println("age repeated are $ageRepeated")
+    ageRepeated.remove(5)
+    println("age repeated are $ageRepeated")
+    val franciscoBirthdayYear = mutableSetOf(1, 9, 9, 7)
+    val franciscoBirthdayYearRepeated = mutableSetOf(9, 7, 1)
+    println("franciscoBirthdayYear and franciscoBirthdayYearRepeated are equals? ${franciscoBirthdayYear == franciscoBirthdayYearRepeated}")
 
-    println(ageOfSoccerPlayers)
+    println("first value is ${ageRepeated.first()}")
+    println("number > 10 ${ageRepeated.filter { age -> age > 10 }}")
 }
