@@ -1,30 +1,20 @@
 fun main() {
-    val namesList = listOf("Francisco", "Javier", "Jennifer", "Pahola")
-    println("Names list $namesList")
+    val lotteryNumbers = listOf(11, 22, 43, 56, 70, 66)
+    val numbersSorted = lotteryNumbers.sortedDescending()
+    println("numbers sorted is $numbersSorted")
 
-    val mutableNamesList = mutableListOf<String>()
-    println("mutable names list is $mutableNamesList")
-    val nameFirstOrNull = mutableNamesList.firstOrNull()
-    println("name first or null is $nameFirstOrNull")
+    val numbersSortedByMultiples = lotteryNumbers.sortedBy { number -> number < 50 }
+    println("numbersSortedByMultiples is $numbersSortedByMultiples")
 
-    mutableNamesList.add("Francisco")
-    mutableNamesList.add("Javier")
-    mutableNamesList.add("Jennifer")
-    println("mutable names list is $mutableNamesList")
+    val numbersShuffled = lotteryNumbers.shuffled()
+    println("numbersShuffled is $numbersShuffled")
 
-    val firstName = mutableNamesList.first()
-    val lastName = mutableNamesList.last()
-    val specificPositionName = mutableNamesList[1]
-    println("first name is $firstName")
-    println("last name is $lastName")
-    println("specific name is $specificPositionName")
+    val numbersReversed = lotteryNumbers.reversed()
+    println("numbersReversed is $numbersReversed")
 
-    mutableNamesList.removeAt(1)
-    println("names mutable list is $mutableNamesList")
+    val messages = lotteryNumbers.map { number -> "\n Your lottery number is $number" }
+    println("messages $messages")
 
-    mutableNamesList.removeIf { characters -> characters.length == 8 }
-    println("names mutable list is $mutableNamesList")
-
-    val myArrayOfInts = arrayOf(1, 2, 3, 4)
-    println("my array numbers is ${myArrayOfInts.toList()}")
+    val numbersFiltered = lotteryNumbers.filter { number -> number > 50 }
+    println("numbers filtered are $numbersFiltered")
 }
