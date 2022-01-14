@@ -1,20 +1,20 @@
 fun main() {
-    val lotteryNumbers = listOf(11, 22, 43, 56, 70, 66)
-    val numbersSorted = lotteryNumbers.sortedDescending()
-    println("numbers sorted is $numbersSorted")
+    val ageOfSuperHeroes = mapOf(
+        "Ironman" to 35,
+        "Superman" to 40,
+        "Spiderman" to 23,
+        "American Captain" to 99
+    )
+    println("super heroes age are $ageOfSuperHeroes")
+    println("Spiderman age is ${ageOfSuperHeroes["Spiderman"]}")
 
-    val numbersSortedByMultiples = lotteryNumbers.sortedBy { number -> number < 50 }
-    println("numbersSortedByMultiples is $numbersSortedByMultiples")
+    val ageOfSoccerPlayers = mutableMapOf(
+        "Cristiano" to 36,
+        "Kaká" to 40
+    )
+    ageOfSoccerPlayers["Messi"] = 33
+    ageOfSoccerPlayers.remove("Kaká")
+    println("Soccer players age is $ageOfSoccerPlayers")
 
-    val numbersShuffled = lotteryNumbers.shuffled()
-    println("numbersShuffled is $numbersShuffled")
-
-    val numbersReversed = lotteryNumbers.reversed()
-    println("numbersReversed is $numbersReversed")
-
-    val messages = lotteryNumbers.map { number -> "\n Your lottery number is $number" }
-    println("messages $messages")
-
-    val numbersFiltered = lotteryNumbers.filter { number -> number > 50 }
-    println("numbers filtered are $numbersFiltered")
+    println(ageOfSoccerPlayers)
 }
