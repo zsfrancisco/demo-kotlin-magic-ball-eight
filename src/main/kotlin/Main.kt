@@ -1,9 +1,9 @@
 fun main() {
-    printName(name = "Francisco", lastname = "Zambrano")
-}
+    val myLambda: (String) -> Int = { value -> value.length }
+    println("Length of the word Francisco is ${myLambda("Francisco")}")
+    println("Length of the word Jennifer is ${myLambda("Jennifer")}")
 
-fun printName(
-    name: String, lastname: String, secondName: String = "", secondLastname: String = ""
-) {
-    println("Mi full name is $name $secondName $lastname $secondLastname")
+    val cheers = listOf("Hello", "Hola", "Ciao")
+    val lengthOfCheers = cheers.map(myLambda)
+    println("lengthOfCheers are $lengthOfCheers")
 }
