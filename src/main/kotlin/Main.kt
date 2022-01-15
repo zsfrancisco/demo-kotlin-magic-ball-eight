@@ -1,8 +1,7 @@
 fun main() {
-    var name: String? = null
-    name?.let { value ->
-        println("The name isn't null, is $value")
+    val colors = listOf("Blue", "Yellow", "Red")
+    with(colors) {
+        println("Our colors are $this")
+        println("this list has $size colors")
     }
-    name = "Francisco"
-    println("The name isn't null, is $name")
 }
